@@ -1,4 +1,6 @@
+// NPM packages
 import { useParams } from "react-router-dom";
+import Moment from "react-moment";
 
 export default function Details({ orders }) {
   const { id } = useParams();
@@ -21,7 +23,9 @@ export default function Details({ orders }) {
       <span>{order.location_name}</span>
       <hr />
       <span>Delivery date:</span>
-      <span>{order.eta}</span>
+      <span>
+        <Moment date={order.eta} format="MMM Do YYYY" />
+      </span>
     </div>
   );
 }
