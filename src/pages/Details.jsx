@@ -1,12 +1,15 @@
 // NPM packages
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Moment from "react-moment";
 
 // Project files
 import Map from "../components/Map";
+import ItemDetail from "../components/ItemDetail";
 
 export default function Details({ orders }) {
   const { id } = useParams();
+  const { t } = useTranslation();
 
   // Properties
   const order = orders.filter((item) => item.id === Number(id))[0];
@@ -21,16 +24,12 @@ export default function Details({ orders }) {
         latitude={order.location_coordinate_latitude}
         longitude={order.location_coordinate_longitude}
       />
-      <span>Sender:</span>
-      <span>{order.sender}</span>
-      <hr />
-      <span>Location:</span>
-      <span>{order.location_name}</span>
-      <hr />
-      <span>Delivery date:</span>
-      <span>
+      <ItemDetail label="Sender">{order.sender}</ItemDetail>
+      <ItemDetail label="Location">{order.location_name}</ItemDetail>
+      <ItemDetail label="Delivery date">
         <Moment date={order.eta} format="MMM Do YYYY" />
-      </span>
+      </ItemDetail>
+      <Link to="/">Go back</Link>
     </div>
   );
 }

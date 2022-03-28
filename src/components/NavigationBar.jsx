@@ -9,8 +9,7 @@ export default function NavigationBar() {
   const [language, setLanguage] = useState("en");
 
   // Properties
-  const label =
-    language === "en" ? "Camiar a Español 🇪🇸" : "Change to English 🇬🇧";
+  const label = language === "en" ? "Español 🇪🇸" : "English 🇬🇧";
 
   // Methods
   function toggleLanguage() {
