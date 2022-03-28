@@ -24,7 +24,7 @@ export default function NavigationBar() {
 
   return (
     <nav id="navigation-bar">
-      <span className="logo">InstaPacket</span>
+      <span className="logo">📦 InstaPacket</span>
       <button onClick={toggleLanguage}>{label}</button>
     </nav>
   );

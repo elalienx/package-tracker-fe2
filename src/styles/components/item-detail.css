@@ -1,0 +1,8 @@
+.item-detail {
+  margin: 8px;
+}
+
+.item-detail .label {
+  color: gray;
+  font-style: italic;
+}

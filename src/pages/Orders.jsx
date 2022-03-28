@@ -11,7 +11,6 @@ export default function Orders({ orders }) {
   return (
     <div id="orders">
       <h1>{t("orders:title")}</h1>
-      <h2>Here are your orders</h2>
       <div className="grid">{Orders}</div>
     </div>
   );
