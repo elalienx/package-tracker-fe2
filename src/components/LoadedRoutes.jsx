@@ -9,7 +9,7 @@ export default function LoadedRoutes({ orders }) {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<Orders orders={orders} />} />
+        <Route path="/" element={<Orders orders={orders} />} />
         <Route path="order/:id" element={<Details orders={orders} />} />
       </Routes>
     </BrowserRouter>
