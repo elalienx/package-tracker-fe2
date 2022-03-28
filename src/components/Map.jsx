@@ -1,16 +1,15 @@
-// NPM Packages
+// NPM packages
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-export default function Map({ latitude, longitude }) {
+export default function Map({ latitude, longiture }) {
   // Properties
-  const position = [latitude, longitude];
-  const zoom = 10;
+  const position = [latitude, longiture];
   const attribution =
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
   const url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
   return (
-    <MapContainer center={position} zoom={zoom}>
+    <MapContainer center={position} zoom={10}>
       <TileLayer attribution={attribution} url={url} />
       <Marker position={position}>
         <Popup>

@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import Moment from "react-moment";
 
 // Project files
-import Map from "../components/Map";
 import ItemDetail from "../components/ItemDetail";
+import Map from "../components/Map";
 
 export default function Details({ orders }) {
   const { id } = useParams();
@@ -22,7 +22,7 @@ export default function Details({ orders }) {
       <h1>{t("details:title")}</h1>
       <Map
         latitude={order.location_coordinate_latitude}
-        longitude={order.location_coordinate_longitude}
+        longiture={order.location_coordinate_longitude}
       />
       <ItemDetail label="Sender">{order.sender}</ItemDetail>
       <ItemDetail label="Location">{order.location_name}</ItemDetail>
