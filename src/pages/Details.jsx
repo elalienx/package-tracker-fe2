@@ -15,8 +15,8 @@ export default function Details({ orders }) {
   if (order === undefined) return <p>The order {id} is not longer available</p>;
 
   return (
-    <div id="order">
-      <h1>Order details</h1>
+    <div id="details">
+      <h1>{t("details:title")}</h1>
       <Map
         latitude={order.location_coordinate_latitude}
         longitude={order.location_coordinate_longitude}
