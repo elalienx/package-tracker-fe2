@@ -1,6 +1,6 @@
 {
   "orders": {
-    "title": "Hello",
+    "title": "Hello {{name}}!",
     "description": "We have this parcels for you:"
   },
   "details": {

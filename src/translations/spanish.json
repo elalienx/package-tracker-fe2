@@ -1,6 +1,6 @@
 {
   "orders": {
-    "title": "Bienvenido",
+    "title": "Bienvenido {{name}}!",
     "description": "Tenemos estos paquetes para ti:"
   },
   "details": {
