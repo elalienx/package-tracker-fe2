@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // Project files
 import LoadedRoutes from "./components/LoadedRoutes";
 import backupData from "./data/backup-data.json";
-import "./styles/style.css";
+import "./styles/style.sass";
 
 export default function App() {
   // Local state

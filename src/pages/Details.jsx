@@ -20,6 +20,7 @@ export default function Details({ orders }) {
   return (
     <div id="details">
       <h1>{t("details:title")}</h1>
+      <p>{t("details:description")}</p>
       <Map
         latitude={order.location_coordinate_latitude}
         longiture={order.location_coordinate_longitude}

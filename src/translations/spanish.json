@@ -1,0 +1,10 @@
+{
+  "orders": {
+    "title": "Bienvenido",
+    "description": "Tenemos estos paquetes para ti:"
+  },
+  "details": {
+    "title": "Paquete de",
+    "description": "Esta es toda la información disponible:"
+  }
+}

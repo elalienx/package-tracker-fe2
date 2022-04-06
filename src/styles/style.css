@@ -1,9 +1,0 @@
-.App {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Components */
-@import "./components/item-detail.css";
-@import "./components/item-order.css";
-/* @import "./components/leaflet.css"; */
-@import "./components/map.css";

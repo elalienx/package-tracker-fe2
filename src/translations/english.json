@@ -1,0 +1,10 @@
+{
+  "orders": {
+    "title": "Hello",
+    "description": "We have this parcels for you:"
+  },
+  "details": {
+    "title": "Parcel from",
+    "description": "This is all the information available:"
+  }
+}

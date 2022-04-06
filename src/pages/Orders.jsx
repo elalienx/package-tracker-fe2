@@ -10,7 +10,10 @@ export default function Orders({ orders }) {
 
   return (
     <div id="orders">
-      <h1>{t("orders:title")}</h1>
+      <h1>
+        {t("orders:title")} {orders[0].user_name}
+      </h1>
+      <p>{t("orders:description")}</p>
       <div className="grid">{Orders}</div>
     </div>
   );
