@@ -1,7 +1,10 @@
 // NPM packages
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHandPeace } from "@fortawesome/free-regular-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
+// Project files
+import IconStatus from "./IconStatus";
 
 export default function ItemOrder({ item }) {
   return (
@@ -14,13 +17,12 @@ export default function ItemOrder({ item }) {
       <div className="spacer">{/* empty on purpose */}</div>
 
       <div className="status sub-container">
-        <div className="icon">📦</div>
-        <span>{item.status}</span>
+        <IconStatus status={item.status} />
       </div>
 
-      <span className="sub-container">
-        <FontAwesomeIcon icon={faHandPeace} />
-      </span>
+      <div className="arrow sub-container">
+        <FontAwesomeIcon icon={faAngleRight} />
+      </div>
     </Link>
   );
 }
