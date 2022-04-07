@@ -23,7 +23,7 @@ export default function NavigationBar() {
   }
 
   return (
-    <nav id="navigation-bar">
+    <nav id="navigation-bar" className="container">
       <span className="logo">📦 InstaPacket</span>
       <button onClick={toggleLanguage}>{label}</button>
     </nav>

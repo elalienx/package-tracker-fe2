@@ -1,0 +1,14 @@
+#orders
+    .item-order
+        margin-bottom: $space-small
+
+@media (min-width: $media-desktop)
+    #orders
+        .grid
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-column-gap: $space-medium
+            grid-row-gap: $space-medium
+
+        .item-order
+            margin-bottom: 0
