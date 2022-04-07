@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 // Project files
+import Logo from "../assets/images/logo-white.svg";
 import i18n from "../scripts/i18n";
 
 export default function NavigationBar() {
@@ -9,7 +10,7 @@ export default function NavigationBar() {
   const [language, setLanguage] = useState("en");
 
   // Properties
-  const label = language === "en" ? "Español 🇪🇸" : "English 🇬🇧";
+  const label = language === "en" ? "es 🇪🇸" : "en 🇬🇧";
 
   // Methods
   function toggleLanguage() {
@@ -23,9 +24,13 @@ export default function NavigationBar() {
   }
 
   return (
-    <nav id="navigation-bar" className="container">
-      <span className="logo">📦 InstaPacket</span>
-      <button onClick={toggleLanguage}>{label}</button>
+    <nav id="navigation-bar">
+      <div className="container">
+        <img src={Logo} alt="The company name written with white letters" />
+        <button className="button-language" onClick={toggleLanguage}>
+          {label}
+        </button>
+      </div>
     </nav>
   );
 }
