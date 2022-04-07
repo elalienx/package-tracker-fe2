@@ -1,14 +1,11 @@
-@import "../base/_variables"
-
 .item-order
     box-sizing: border-box
     display: flex
-    flex-direction: row
-    justify-content: space-between
     background-color: white
     padding: $space-medium
     border-radius: $border-radius
     text-decoration: none
+    gap: $space-small
 
     .spacer
         flex-grow: 1
@@ -17,9 +14,6 @@
         display: flex
         flex-direction: column
         justify-content: center
-
-        .icon
-            align-self: center
 
     .sub-container.details
         .title
@@ -30,8 +24,38 @@
             color:$color-subtitles
     
     .sub-container.status
-        margin-right: $space-medium
         color: $color-accent
+
+        .icon
+            align-self: center
 
     .sub-container.arrow
         color: $color-background
+
+        .desktop
+            display: none
+
+// Desktop
+@media (min-width: $media-desktop)
+    .item-order
+        flex-direction: column
+        padding: 0
+        overflow: hidden
+        gap: $space-medium
+
+        .sub-container
+            align-content: center
+            text-align: center
+
+        .sub-container.details
+            margin-top: $space-medium
+
+        .sub-container.arrow
+            background-color: $color-accent
+            box-sizing: border-box
+            padding: $space-medium
+
+            .mobile
+                display: none
+            .desktop
+                display: initial

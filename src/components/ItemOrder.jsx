@@ -21,7 +21,8 @@ export default function ItemOrder({ item }) {
       </div>
 
       <div className="arrow sub-container">
-        <FontAwesomeIcon icon={faAngleRight} />
+        <FontAwesomeIcon className="mobile" icon={faAngleRight} />
+        <span className="desktop">View details</span>
       </div>
     </Link>
   );
