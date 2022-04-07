@@ -18,7 +18,7 @@ export default function Details({ orders }) {
   if (order === undefined) return <p>The order {id} is not longer available</p>;
 
   return (
-    <div id="details">
+    <div id="details" className="container">
       <h1>{t("details:title")}</h1>
       <p>{t("details:description")}</p>
       <Map

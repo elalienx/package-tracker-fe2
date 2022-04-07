@@ -12,7 +12,7 @@ export default function Orders({ orders }) {
   const name = orders[0].user_name;
 
   return (
-    <div id="orders">
+    <div id="orders" className="container">
       <h1>{t("orders:title", { name: name })}</h1>
       <p>{t("orders:description")}</p>
       <div className="grid">{Orders}</div>
