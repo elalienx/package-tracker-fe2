@@ -1,14 +1,22 @@
 #orders
-    .item-order
-        margin-bottom: $space-small
+  .item-order
+    margin-bottom: $space-small
 
+
+// Table
+@media (min-width: $media-tablet)
+  #orders
+    .grid
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-column-gap: $space-medium
+      grid-row-gap: $space-medium
+
+// Desktop
 @media (min-width: $media-desktop)
-    #orders
-        .grid
-            display: grid
-            grid-template-columns: repeat(4, 1fr)
-            grid-column-gap: $space-medium
-            grid-row-gap: $space-medium
+  #orders
+    .grid
+      grid-template-columns: repeat(4, 1fr)
 
-        .item-order
-            margin-bottom: 0
+    .item-order
+      margin-bottom: 0
