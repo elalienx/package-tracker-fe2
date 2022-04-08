@@ -8,7 +8,7 @@ export default function ItemDetail({ label = "", text, icon = "" }) {
     <div className="item-detail">
       {/* Font awesome goes here */}
       <div className="icon">ℹ️</div>
-      <div className="content">
+      <div>
         <span className="label">{label}</span>
         <p>{text}</p>
       </div>

@@ -1,9 +1,29 @@
 #details
   .content
     overflow: hidden // to maintain the border radius on the map
+    margin-bottom: $space-big
 
+    .leaflet-container
+      border-radius: $border-radius $border-radius 0 0 
 
     .information
+      box-sizing: border-box
       background-color: white
       color: $color-text
       border-radius: 0 0 $border-radius $border-radius
+
+
+@media (min-width: $media-desktop)
+  #details
+    .content
+      display: flex
+      flex-direction: row-reverse
+      height: 480px
+      gap: $space-big
+
+      .leaflet-container
+        border-radius: $border-radius
+
+      .information
+        width: 300px
+        border-radius: $border-radius
