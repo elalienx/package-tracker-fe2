@@ -13,7 +13,7 @@ export default function ItemDetail({ label = "", text, icon = "" }) {
       <div className="icon">
         <FontAwesomeIcon icon={icon} />
       </div>
-      <div>
+      <div className="text-information">
         <span className="label">{label}</span>
         <p>{text}</p>
       </div>

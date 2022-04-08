@@ -41,7 +41,11 @@ export default function Details({ orders }) {
           <ItemDetail label="Signature needed" text={sign} icon="info-circle" />
         </div>
       </section>
-      <Link to="/">Go back</Link>
+      <footer>
+        <Link className="button" to="/">
+          Go back
+        </Link>
+      </footer>
     </div>
   );
 }
