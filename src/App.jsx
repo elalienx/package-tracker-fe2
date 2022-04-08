@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 // Project files
 import LoadedRoutes from "./components/LoadedRoutes";
+import LoaderSpinner from "./components/LoaderSpinner";
 import backupData from "./data/backup-data.json";
 import "./styles/style.sass";
 
@@ -37,7 +38,7 @@ export default function App() {
 
   return (
     <div className="App">
-      {status === 0 && <p>Loading...</p>}
+      {status === 0 && <LoaderSpinner />}
       {status === 1 && <LoadedRoutes orders={orders} />}
       {status === 2 && <p>Error!</p>}
     </div>
