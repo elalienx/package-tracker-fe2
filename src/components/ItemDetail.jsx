@@ -10,8 +10,8 @@ export default function ItemDetail({ label = "", text, icon = "" }) {
   return (
     <div className="item-detail">
       {/* Font awesome goes here */}
-      <div className="icon">
-        <FontAwesomeIcon icon={icon} />
+      <div className="icon-container">
+        <FontAwesomeIcon className="icon" icon={icon} />
       </div>
       <div className="text-information">
         <span className="label">{label}</span>
