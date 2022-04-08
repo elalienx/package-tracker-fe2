@@ -1,10 +1,14 @@
-export default function ItemDetail({ label, children }) {
+export default function ItemDetail({ label, text, icon }) {
+  // Safeguard
+  if (text === null) return null;
+  if (text === false) return null;
+  if (text === true) text = "Yes";
+
   return (
     <div className="item-detail">
+      {/* Font awesome goes here */}
       <span className="label">{label}:</span>
-      <br />
-      {/* Note: We use children instead of a string, so we can pass the <Moment/> date component as well */}
-      {children}
+      <p>{text}</p>
     </div>
   );
 }

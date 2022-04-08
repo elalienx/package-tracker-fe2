@@ -19,17 +19,32 @@ export default function Details({ orders }) {
 
   return (
     <div id="details" className="container">
-      <h1>{t("details:title")}</h1>
+      <h1>{t("details:title", { sender: order.sender })}</h1>
       <p>{t("details:description")}</p>
-      <Map
-        latitude={order.location_coordinate_latitude}
-        longiture={order.location_coordinate_longitude}
-      />
-      <ItemDetail label="Sender">{order.sender}</ItemDetail>
-      <ItemDetail label="Location">{order.location_name}</ItemDetail>
-      <ItemDetail label="Delivery date">
-        <Moment date={order.eta} format="MMM Do YYYY" />
-      </ItemDetail>
+
+      <section className="content">
+        <Map
+          latitude={order.location_coordinate_latitude}
+          longiture={order.location_coordinate_longitude}
+        />
+        <ItemDetail label="Location" text={order.location_name} icon="pin" />
+        <ItemDetail
+          label="Estimated delivery time"
+          text={<Moment date={order.eta} format="MMM Do YYYY" />}
+          icon="truck"
+        />
+        <ItemDetail
+          label="Last update"
+          text={<Moment date={order.last_updated} format="MMM Do YYYY" />}
+          icon="stopwatch"
+        />
+        <ItemDetail label="Notes" text={order.notes} icon="sticky" />
+        <ItemDetail
+          label="Verification required"
+          text={order.verification_required}
+          icon="info-circle"
+        />
+      </section>
       <Link to="/">Go back</Link>
     </div>
   );

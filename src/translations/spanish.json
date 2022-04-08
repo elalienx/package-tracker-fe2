@@ -4,7 +4,7 @@
     "description": "Tenemos estos paquetes para ti:"
   },
   "details": {
-    "title": "Paquete de",
+    "title": "Paquete de {{sender}}",
     "description": "Esta es toda la información disponible:"
   }
 }

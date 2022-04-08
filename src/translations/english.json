@@ -4,7 +4,7 @@
     "description": "We have this parcels for you:"
   },
   "details": {
-    "title": "Parcel from",
+    "title": "Parcel from {{sender}}",
     "description": "This is all the information available:"
   }
 }
