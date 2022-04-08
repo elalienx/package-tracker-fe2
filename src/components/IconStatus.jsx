@@ -5,16 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OrderStatus from "../data/order-status.json";
 
 export default function IconStatus({ status }) {
-  // Properties
-  const icon = OrderStatus[status].icon || "fa-info-circle";
-  const label = OrderStatus[status].label || "unknow label";
+  // Safeguard
+  if (OrderStatus[status] == undefined) return null;
 
   return (
     <>
       <div className="icon">
-        <FontAwesomeIcon icon={icon} />
+        <FontAwesomeIcon icon={OrderStatus[status].icon} />
       </div>
-      <span>{label}</span>
+      <span>{OrderStatus[status].label}</span>
     </>
   );
 }
