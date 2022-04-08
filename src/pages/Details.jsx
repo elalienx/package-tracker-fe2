@@ -13,6 +13,9 @@ export default function Details({ orders }) {
 
   // Properties
   const order = orders.filter((item) => item.id === Number(id))[0];
+  const eta = <Moment date={order.eta} format="MMM Do YYYY" />;
+  const lastUpdate = <Moment date={order.last_updated} format="MMM Do YYYY" />;
+  const sign = order.verification_required;
 
   // Safeguard
   if (order === undefined) return <p>The order {id} is not longer available</p>;
@@ -28,22 +31,10 @@ export default function Details({ orders }) {
           longiture={order.location_coordinate_longitude}
         />
         <ItemDetail label="Location" text={order.location_name} icon="pin" />
-        <ItemDetail
-          label="Estimated delivery time"
-          text={<Moment date={order.eta} format="MMM Do YYYY" />}
-          icon="truck"
-        />
-        <ItemDetail
-          label="Last update"
-          text={<Moment date={order.last_updated} format="MMM Do YYYY" />}
-          icon="stopwatch"
-        />
+        <ItemDetail label="Estimated delivery time" text={eta} icon="truck" />
+        <ItemDetail label="Last update" text={lastUpdate} icon="stopwatch" />
         <ItemDetail label="Notes" text={order.notes} icon="sticky" />
-        <ItemDetail
-          label="Verification required"
-          text={order.verification_required}
-          icon="info-circle"
-        />
+        <ItemDetail label="Signature required" text={sign} icon="info-circle" />
       </section>
       <Link to="/">Go back</Link>
     </div>
