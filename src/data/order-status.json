@@ -1,0 +1,18 @@
+{
+  "order-info-received": {
+    "label": "Order received",
+    "icon": "fa-truck-ramp-box"
+  },
+  "on-the-way": {
+    "label": "On the way",
+    "icon": "fa-truck-fast"
+  },
+  "ready-for-pickup": {
+    "label": "Ready for pikcup",
+    "icon": "fa-truck-pickup"
+  },
+  "delivered": {
+    "label": "Delivered",
+    "icon": "fa-check"
+  }
+}

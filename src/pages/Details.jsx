@@ -30,10 +30,14 @@ export default function Details({ orders }) {
           longiture={order.location_coordinate_longitude}
         />
         <div className="information">
-          <ItemDetail label="Location" text={order.location_name} icon="pin" />
+          <ItemDetail
+            label="Location"
+            text={order.location_name}
+            icon="map-pin"
+          />
           <ItemDetail label="Estimated delivery time" text={eta} icon="truck" />
           <ItemDetail label="Last update" text={lastUpdate} icon="stopwatch" />
-          <ItemDetail label="Notes" text={order.notes} icon="sticky" />
+          <ItemDetail label="Notes" text={order.notes} icon="note-sticky" />
           <ItemDetail label="Signature needed" text={sign} icon="info-circle" />
         </div>
       </section>
